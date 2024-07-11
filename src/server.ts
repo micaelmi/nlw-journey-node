@@ -1,6 +1,9 @@
 import fastify from "fastify";
+import fastifySwagger from "@fastify/swagger";
+import fastifySwaggerUI from "@fastify/swagger-ui";
 import cors from "@fastify/cors";
 import {
+  jsonSchemaTransform,
   serializerCompiler,
   validatorCompiler,
 } from "fastify-type-provider-zod";
@@ -23,6 +26,23 @@ const app = fastify();
 
 app.register(cors, {
   origin: "*",
+});
+
+app.register(fastifySwagger, {
+  swagger: {
+    consumes: ["application/json"],
+    produces: ["application/json"],
+    info: {
+      title: "NLW Journey API - Plann.er",
+      description: "API para gerenciamento de viagens",
+      version: "1.0.0",
+    },
+  },
+  transform: jsonSchemaTransform,
+});
+
+app.register(fastifySwaggerUI, {
+  routePrefix: "/docs",
 });
 
 app.setValidatorCompiler(validatorCompiler);
