@@ -1,0 +1,11 @@
+### create trip
+POST http://localhost:3333/trips
+Content-Type: application/json
+
+{
+  "destination": "Disney",
+  "starts_at": "2025-02-10 00:00:00",
+  "ends_at": "2025-02-28 00:00:00",
+  "owner_name": "Micael Inácio",
+  "owner_email": "micael@gmail.com"
+}
