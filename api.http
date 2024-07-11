@@ -3,9 +3,10 @@ POST http://localhost:3333/trips
 Content-Type: application/json
 
 {
-  "destination": "Disney",
-  "starts_at": "2025-02-10 00:00:00",
-  "ends_at": "2025-02-28 00:00:00",
+  "destination": "Madrid",
+  "starts_at": "2025-06-10 00:00:00",
+  "ends_at": "2025-07-03 00:00:00",
   "owner_name": "Micael Inácio",
-  "owner_email": "micael@gmail.com"
+  "owner_email": "micael@gmail.com",
+  "emails_to_invite": ["lucas@gmail.com", "maga@gmail.com", "renato@gmail.com"]
 }
