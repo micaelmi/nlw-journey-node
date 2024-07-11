@@ -10,3 +10,33 @@ Content-Type: application/json
   "owner_email": "micael@gmail.com",
   "emails_to_invite": ["lucas@gmail.com", "maga@gmail.com", "renato@gmail.com"]
 }
+
+### confirm trip
+GET http://localhost:3333/trips/0478754c-6de8-4e62-899c-6af70cf9a708/confirm
+
+### confirm participant
+GET http://localhost:3333/participants/0478754c-6de8-4e62-899c-6af70cf9a708/confirm
+
+### create activity
+POST http://localhost:3333/trips/0478754c-6de8-4e62-899c-6af70cf9a708/activities
+Content-Type: application/json
+
+{
+  "title": "Praia",
+  "occurs_at": "2025-06-12 7:00:00"
+}
+
+### get activities
+GET http://localhost:3333/trips/0478754c-6de8-4e62-899c-6af70cf9a708/activities
+
+### create link
+POST http://localhost:3333/trips/0478754c-6de8-4e62-899c-6af70cf9a708/links
+Content-Type: application/json
+
+{
+  "title": "Reserva do AirBnB",
+  "url": "https://airbnb.com/reserva-muito-massa"
+}
+
+### get links
+GET http://localhost:3333/trips/0478754c-6de8-4e62-899c-6af70cf9a708/links
